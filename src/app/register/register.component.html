@@ -1,0 +1,180 @@
+<div [ngClass]="isLoading ? 'loader-bg' : 'border border-solid border-black p-5'">
+
+    <div class="flex justify-center align-center">
+        <div class="loader" *ngIf="isLoading">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <h3>Creating account</h3>
+        </div>
+    </div>
+    <div *ngIf="!isLoading" class="flex justify-center align-center w-full">
+    
+    <form *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate enctype="multipart/form-data">
+        <div class="flex flex-col justify-center">
+    
+        <div class="mb-6 main-input">
+            <div class="right">
+                <label for="first_name" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">First Name</label>
+    
+                <input type="text" id="first_name" placeholder="eg. Student" name="first_name" [(ngModel)]="form.first_name" required #first_name="ngModel" 
+                [ngClass]="first_name.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+    
+            <div *ngIf="first_name.errors && f.submitted">
+                <p  *ngIf="first_name.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> First Name is required!</p>
+            </div>
+
+            </div>
+
+            <div>
+                <label for="last_name" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Last Name</label>
+    
+                <input type="text" id="last_name" placeholder="eg. Zero" name="last_name" [(ngModel)]="form.last_name" required #last_name="ngModel" 
+                [ngClass]="last_name.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+    
+            <div *ngIf="last_name.errors && f.submitted">
+                <p  *ngIf="last_name.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Last Name is required!</p>
+            </div>
+
+            </div>
+            
+        </div>
+
+        <div class="mb-6 main-input">
+            <div class="right">
+                <label for="email" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Email</label>
+    
+                <input type="email" id="email" placeholder="eg. zero@std.com" name="email" [(ngModel)]="form.email" required #email="ngModel" 
+                [ngClass]="email.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+        
+                <div *ngIf="email.errors && f.submitted">
+                    <p  *ngIf="email.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Email is required!</p>
+                </div>
+            </div>
+            
+            <div>
+                <label for="username" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Username</label>
+    
+                <input type="text" id="username" placeholder="eg. studentZero" name="username" [(ngModel)]="form.username" required #username="ngModel" 
+                [ngClass]="username.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+    
+            <div *ngIf="username.errors && f.submitted">
+                <p  *ngIf="username.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Username is required!</p>
+            </div>
+
+            </div>
+            
+        </div>
+
+        <div class="mb-6 main-input">
+
+            <div class="right">
+                <label for="password" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Password</label>
+        
+                <input type="password" id="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" 
+                [ngClass]="password.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+        
+                <div *ngIf="password.errors && f.submitted">
+                    <p *ngIf="password.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Password is required.</p>
+        
+                    <p *ngIf="password.errors['minlength']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Password must be at least 6 characters</p>
+                </div>
+                
+            </div>
+            
+            <div>
+                <label for="phone_number" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Phone number</label>
+    
+                <input type="tel" id="phone_number" placeholder="eg. 0712345678" name="phone_number" [(ngModel)]="form.phone_number" required #phone_number="ngModel" 
+                [ngClass]="phone_number.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+    
+            <div *ngIf="phone_number.errors && f.submitted">
+                <p  *ngIf="phone_number.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Phone number is required!</p>
+            </div>
+
+            </div>
+            
+        </div>
+    
+        <div class="mb-6 main-input">
+
+            <div class="right">
+                <label for="avatar" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Profile picture</label>
+    
+                <input type="file" id="avatar" name="avatar" [(ngModel)]="form.avatar" required #avatar="ngModel" 
+                [ngClass]="avatar.errors && f.submitted ? 'bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-96 p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500' : 'border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-green-500'">
+        
+                <div *ngIf="avatar.errors && f.submitted">
+                    <p  *ngIf="avatar.errors['required']" class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oh, snapp!</span> Image is required!</p>
+                </div>
+            </div>           
+
+            <div>
+                <label for="avatar" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Select gender</label> 
+                <ul class="items-center w-96 text-sm font-medium text-green-900 bg-white p-2.5 rounded-lg border border-green-500 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="horizontal-list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="horizontal-list-radio-id" class="py-3 ml-2 w-full text-sm font-medium text-green-900 dark:text-gray-300">Male</label>
+                        </div>
+                    </li>
+                    <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="horizontal-list-radio-millitary" type="radio" value="" name="list-radio" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="horizontal-list-radio-millitary" class="py-3 ml-2 w-full text-sm font-medium text-green-900 dark:text-gray-300">Female</label>
+                        </div>
+                    </li>
+                    <li class="w-full dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="horizontal-list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="horizontal-list-radio-passport" class="py-3 ml-2 w-full text-sm font-medium text-green-900 dark:text-gray-300">Other</label>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    
+        <div class="flex justify-center align-center mt-7">
+            <button type="submit" class="relative inline-flex w-96 items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
+                <span class="relative px-5 py-1.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Register
+                </span>
+            </button>
+        </div>
+    
+            <div *ngIf="isSignUpFailed && errorMessage.email"
+                class="mt-2 p-3 text-sm  bg-red-50 border rounded-sm border-red-500 text-red-900 dark:border-red-500">
+                <span class="font-medium">Registration failed!</span> {{ errorMessage.email }}
+            </div>
+
+            <div *ngIf="isSignUpFailed && errorMessage.password"
+                class="mt-2 p-3 text-sm  bg-red-50 border rounded-sm border-red-500 text-red-900 dark:border-red-500">
+                <span class="font-medium">Registration failed!</span> {{ errorMessage.password }}
+            </div>
+
+            <div *ngIf="isSignUpFailed && errorMessage.avatar"
+                class="mt-2 p-3 text-sm  bg-red-50 border rounded-sm border-red-500 text-red-900 dark:border-red-500">
+                <span class="font-medium">Registration failed!</span> {{ errorMessage.avatar }}
+            </div>
+
+            <div *ngIf="isSignUpFailed && errorMessage.username"
+                class="mt-2 p-3 text-sm  bg-red-50 border rounded-sm border-red-500 text-red-900 dark:border-red-500">
+                <span class="font-medium">Registration failed!</span> {{ errorMessage.username }}
+            </div>
+
+            <div *ngIf="isSignUpFailed && errorMessage.gender"
+                class="mt-2 p-3 text-sm  bg-red-50 border rounded-sm border-red-500 text-red-900 dark:border-red-500">
+                <span class="font-medium">Registration failed!</span> {{ errorMessage.gender }}
+            </div>
+        
+    
+        </div>
+    </form>
+    
+    </div>
+    
+    </div>
+    

@@ -1,0 +1,35 @@
+.home{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.side-image{
+    margin-top: 1rem;
+    grid-area: 2/2/6/3;
+    width: 300px;
+}
+
+.main-heading{
+    font-size: 3.6rem;
+    max-width: 13ch;
+    line-height: 1.4;
+}
+
+.sub-heading{
+    color: #444444;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 38ch;
+}
+
+.home-btn {
+    background: #2A2A2A;
+    color: #fff;
+    border-radius: 900px;
+    font-size: 0.95rem;
+    width: 10.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    line-height: 1.4;
+}
