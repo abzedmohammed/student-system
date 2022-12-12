@@ -11,6 +11,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { PaymentComponent } from './payment/payment.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     NavbarComponent,
     ProfileComponent,
     RegisterComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    DashboardComponent,
+    AccountsComponent,
+    PaymentComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
