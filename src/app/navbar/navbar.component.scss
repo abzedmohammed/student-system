@@ -1,0 +1,18 @@
+$light-grey: #8A92A6;
+$black: #000;
+$green: #4caf50;
+$teal: #004d40;
+
+.nav-item:hover{
+    border: 1px solid $green;
+    border-radius: 8px;
+    color: $teal;
+}
+
+.active{
+    border-bottom: 2px solid $green;
+}
+
+.active:hover{
+    border-bottom: none;
+}

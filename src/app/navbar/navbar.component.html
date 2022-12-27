@@ -39,27 +39,27 @@
       <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         
         <div class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700" *ngIf="isLoggedIn">
-          <li>
-            <a routerLink="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+          <li class="nav-item">
+            <a routerLink="/" [routerLinkActiveOptions]={exact:true} routerLinkActive="active" class="block py-2 pl-3 pr-4 text-teal-900 text-base font-bold">Home</a>
           </li>
-          <li>
-            <a routerLink="/dashboard" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</a>
+          <li class="nav-item">
+            <a routerLink="dashboard" routerLinkActive="active" class="block py-2 pl-3 pr-4 text-teal-900 text-base rounded font-bold">Dashboard</a>
           </li>
-          <li>
-            <a routerLink="/accounts" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Accounts</a>
+          <li class="nav-item">
+            <a routerLink="accounts" routerLinkActive="active" class="block py-2 pl-3 pr-4 text-teal-900 text-base rounded font-bold">Accounts</a>
           </li>
-          <li>
-            <a routerLink="/payments" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Payments</a>
+          <li class="nav-item">
+            <a routerLink="payments" routerLinkActive="active" class="block py-2 pl-3 pr-4 text-teal-900 text-base rounded font-bold">Payments</a>
           </li>
         </div>
 
         <div class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700" *ngIf="isLoggedOut">
-          <li>
-            <a routerLink="/login" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
+          <li class="nav-item">
+            <a routerLink="login" routerLinkActive="active" class="block py-2 pl-3 pr-4 text-teal-900 text-base rounded font-bold">Login</a>
           </li>
 
-          <li>
-            <a routerLink="/register" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Register</a>
+          <li class="nav-item">
+            <a routerLink="register" routerLinkActive="active" class="block py-2 pl-3 pr-4 text-teal-900 text-base rounded font-bold">Register</a>
           </li>
         </div>
         

@@ -1,4 +1,4 @@
-<div class="container home mx-auto mt-7">
+<div class="container home mx-auto mt-7 p-3">
 
     <section class="side-image">
         <svg aria-hidden="true"
@@ -8,11 +8,18 @@
     </section>
 
     <main class="main">
-        <h2 class="main-heading">Bring Students To The Top</h2>
+        <h1 class="main-heading">Bring Students To The Top</h1>
         <p class="sub-heading my-7">No more worries on how to handle large student data. 
             Now with ST-System every process is streamline to meet your everyay needs.</p>
-        <a href="/dashboard">
-            <button class="home-btn">Dashboard</button>
-        </a>
+
+        <div class="flex">
+            <a href="/dashboard" *ngIf="isLoggedIn">
+                <button class="home-btn">Dashboard</button>
+            </a>
+    
+            <a href="/login" *ngIf="isLoggedOut">
+                <button class="home-btn">Login</button>
+            </a>
+        </div>
     </main>
 </div>

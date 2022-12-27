@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardComponent,
     AccountsComponent,
     PaymentComponent,
-    SettingsComponent
+    SettingsComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,

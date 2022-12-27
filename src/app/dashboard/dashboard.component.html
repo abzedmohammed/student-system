@@ -1,1 +1,177 @@
-<p>dashboard is still in development</p>
+<!-- <app-side-navbar></app-side-navbar> -->
+
+<div class="container mx-auto">
+     <div class="info-cards grid grid-cols-4 gap-2">
+
+        <div class="cards">
+            <h3>Unresolved</h3>
+            <h1>60</h1>
+        </div>   
+        
+        <div class="cards">
+            <h3>Pending</h3>
+            <h1>10</h1>
+        </div> 
+
+        <div class="cards">
+            <h3>Overdue</h3>
+            <h1>6</h1>
+        </div> 
+
+        <div class="cards">
+            <h3>On hold</h3>
+            <h1>13</h1>
+        </div> 
+    </div>
+
+    <div class="grid grid-cols-3">
+        <!-- <div class="task-manager my-3 p-4">
+            <h3 class="text-2xl font-bold text-teal-900">Tasks</h3>
+            <p class="text-mute">Today</p>
+            <ul>
+                <li></li>
+            </ul>
+        </div> -->
+        
+    <div class="w-full max-w-sm p-4 bg-white border rounded-lg shadow-md sm:p-4 task-manager my-3">
+        <h5 class="mb-3 text-base font-semibold text-teal-900 md:text-xl dark:text-white">
+            Tasks
+        </h5>
+        <div class="flex justify-between items-center flex-row">
+            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Today</p>
+            <input type="date" name="data" id="" />
+        </div>
+        <ul class="my-4 space-y-3">
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" width="23" height="23" fill="#fdd835" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 502 511.82"><path fill-rule="nonzero" d="M279.75 471.21c14.34-1.9 25.67 12.12 20.81 25.75-2.54 6.91-8.44 11.76-15.76 12.73a260.727 260.727 0 0 1-50.81 1.54c-62.52-4.21-118.77-31.3-160.44-72.97C28.11 392.82 0 330.04 0 260.71 0 191.37 28.11 128.6 73.55 83.16S181.76 9.61 251.1 9.61c24.04 0 47.47 3.46 69.8 9.91a249.124 249.124 0 0 1 52.61 21.97l-4.95-12.96c-4.13-10.86 1.32-23.01 12.17-27.15 10.86-4.13 23.01 1.32 27.15 12.18L428.8 68.3a21.39 21.39 0 0 1 1.36 6.5c1.64 10.2-4.47 20.31-14.63 23.39l-56.03 17.14c-11.09 3.36-22.8-2.9-26.16-13.98-3.36-11.08 2.9-22.8 13.98-26.16l4.61-1.41a210.71 210.71 0 0 0-41.8-17.12c-18.57-5.36-38.37-8.24-59.03-8.24-58.62 0-111.7 23.76-150.11 62.18-38.42 38.41-62.18 91.48-62.18 150.11 0 58.62 23.76 111.69 62.18 150.11 34.81 34.81 81.66 57.59 133.77 61.55 14.9 1.13 30.23.76 44.99-1.16zm-67.09-312.63c0-10.71 8.69-19.4 19.41-19.4 10.71 0 19.4 8.69 19.4 19.4V276.7l80.85 35.54c9.8 4.31 14.24 15.75 9.93 25.55-4.31 9.79-15.75 14.24-25.55 9.93l-91.46-40.2c-7.35-2.77-12.58-9.86-12.58-18.17V158.58zm134.7 291.89c-15.62 7.99-13.54 30.9 3.29 35.93 4.87 1.38 9.72.96 14.26-1.31 12.52-6.29 24.54-13.7 35.81-22.02 5.5-4.1 8.36-10.56 7.77-17.39-1.5-15.09-18.68-22.74-30.89-13.78a208.144 208.144 0 0 1-30.24 18.57zm79.16-69.55c-8.84 13.18 1.09 30.9 16.97 30.2 6.21-.33 11.77-3.37 15.25-8.57 7.86-11.66 14.65-23.87 20.47-36.67 5.61-12.64-3.13-26.8-16.96-27.39-7.93-.26-15.11 4.17-18.41 11.4-4.93 10.85-10.66 21.15-17.32 31.03zm35.66-99.52c-.7 7.62 3 14.76 9.59 18.63 12.36 7.02 27.6-.84 29.05-14.97 1.33-14.02 1.54-27.9.58-41.95-.48-6.75-4.38-12.7-10.38-15.85-13.46-6.98-29.41 3.46-28.34 18.57.82 11.92.63 23.67-.5 35.57zM446.1 177.02c4.35 10.03 16.02 14.54 25.95 9.96 9.57-4.4 13.86-15.61 9.71-25.29-5.5-12.89-12.12-25.28-19.69-37.08-9.51-14.62-31.89-10.36-35.35 6.75-.95 5.03-.05 9.94 2.72 14.27 6.42 10.02 12 20.44 16.66 31.39z"/></svg>
+                    <span class="flex-1 ml-3">Disable Student One account</span>
+                    <span class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">Pending</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg width="23" height="23" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="🔍-System-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ic_fluent_calendar_overdue_24_filled" fill="#ef6c00" fill-rule="nonzero">
+                                <path d="M17.5,12 C20.5376,12 23,14.4624 23,17.5 C23,20.5376 20.5376,23 17.5,23 C14.4624,23 12,20.5376 12,17.5 C12,14.4624 14.4624,12 17.5,12 Z M17.5,19.875 C17.1548,19.875 16.875,20.1548 16.875,20.5 C16.875,20.8452 17.1548,21.125 17.5,21.125 C17.8452,21.125 18.125,20.8452 18.125,20.5 C18.125,20.1548 17.8452,19.875 17.5,19.875 Z M21,8.5 L21,12.0218 C19.9897,11.375 18.7886,11 17.5,11 C13.9101,11 11,13.9101 11,17.5 C11,18.6894769 11.3195266,19.8043976 11.8774103,20.7635139 L12.0218,21 L6.25,21 C4.51696414,21 3.10075377,19.6435215 3.00514477,17.9344215 L3,17.75 L3,8.5 L21,8.5 Z M17.5,14 C17.2545778,14 17.0504,14.1769086 17.0080571,14.4101355 L17,14.5 L17,18.5 C17,18.7761 17.2239,19 17.5,19 C17.7454222,19 17.9496,18.8230914 17.9919429,18.5898645 L18,18.5 L18,14.5 C18,14.2239 17.7761,14 17.5,14 Z M17.75,3 C19.4830069,3 20.8992442,4.35645051 20.9948551,6.06557565 L21,6.25 L21,7 L3,7 L3,6.25 C3,4.51696414 4.35645051,3.10075377 6.06557565,3.00514477 L6.25,3 L17.75,3 Z" id="🎨-Color"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="flex-1 ml-3">Add GoLang content</span>
+                    <span class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">Overdue</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg width="23" height="23" style="overflow:visible;enable-background:new 0 0 32 32" viewBox="0 0 32 32" width="32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g id="Complete_x5F_Symbol_1_"><g id="Complete_x5F_Symbol"><circle cx="16" cy="16" id="BG" r="16" style="fill:#19D873;"/><polygon id="Done_x5F_Symbol" points="14,17.9 14,17.9 14,17.9 10.1,14 8,16.1         14,22.1 24,12.1 21.9,10 " style="fill:#E6E6E6;"/></g></g></g></svg>
+                    <span class="flex-1 ml-3">Create account for User Xyz</span>
+                    <span class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">Complete</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg fill="#ffcc80" width="23" height="23" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <path d="M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M224,320
+                            c0,8.836-7.164,16-16,16h-32c-8.836,0-16-7.164-16-16V192c0-8.836,7.164-16,16-16h32c8.836,0,16,7.164,16,16V320z M352,320
+                            c0,8.836-7.164,16-16,16h-32c-8.836,0-16-7.164-16-16V192c0-8.836,7.164-16,16-16h32c8.836,0,16,7.164,16,16V320z"/>
+                        <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg>
+                    <span class="flex-1 ml-3">Launch the new system</span>
+                    <span class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">On hold</span>
+                </a>
+            </li>
+        </ul>
+        <div>
+            <a href="#" class="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400">
+                View all
+            </a>
+        </div>
+    </div>
+
+    
+        <div class="next-event my-3 p-4">
+            <div>
+                <h3 class="text-2xl font-bold text-teal-900 mb-3">Next Event</h3>
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:15;"></span>
+                  </span>
+                  days
+                </div> 
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:10;"></span>
+                  </span>
+                  hours
+                </div> 
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:24;"></span>
+                  </span>
+                  min
+                </div> 
+                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value:31;"></span>
+                  </span>
+                  sec
+                </div>
+              </div>
+            </div>
+
+            <div class="upcoming-events mt-3 p-4">
+                <h5 class="text-base font-semibold text-teal-900 md:text-xl dark:text-white">
+                    Upcoming events
+                </h5>
+                <ul class="menu w-full">
+                    <li class="bordered"><a>Org-wide meeting</a></li>
+                    <li><a>Graduation ceremeony for cohort 5</a></li>
+                    <li><a>End of year Awards event</a></li>
+                  </ul>
+                  <div>
+                    <a href="#" class="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400">
+                        View all
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="unknown my-3 p-4">
+            <div>
+                <h3 class="text-2xl font-bold text-teal-900 mb-3">Admissions Progress</h3>
+                <div class="radial-progress bg-teal-900 text-primary-content text-3xl border-2 border-green-300" style="--value:28; --size:12rem; --thickness: 12px;">28%</div>
+            </div>
+
+            <div>
+                <div class="stats shadow mt-2">
+  
+                    <div class="stat place-items-center">
+                      <div class="stat-title">Estimated <br>Expenses</div>
+                      <div class="stat-value">31K</div>
+                      <div class="stat-desc">Jan 2023</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                      <div class="stat-title">Expected <br>Students</div>
+                      <div class="stat-value text-secondary">4,200</div>
+                      <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                      <div class="stat-title">Confirmed <br>numbers</div>
+                      <div class="stat-value">1,200</div>
+                      <div class="stat-desc">↘︎ 90 (14%)</div>
+                    </div>
+                    
+                  </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'register', pathMatch: 'full', component: RegisterComponent},
   {path: 'dashboard', pathMatch: 'full', component: DashboardComponent},
   {path: 'accounts', pathMatch: 'full', component: AccountsComponent},
-  {path: 'payments', pathMatch: 'full', component: PaymentComponent},
+  {path: 'dashboard/payments', pathMatch: 'full', component: PaymentComponent},
   {path: 'profile/:username', pathMatch: 'full', component: ProfileComponent},
   {path: 'settings', pathMatch: 'full', component: SettingsComponent},
   {path: '**', component: ErrorPageComponent},

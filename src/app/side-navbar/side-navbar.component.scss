@@ -1,0 +1,50 @@
+$light-grey: #8A92A6;
+$black: #000;
+$green: #4caf50;
+$teal: #004d40;
+
+.sidenav-item a{
+    font-weight: 700;
+    color: $teal;
+    font-size: 16px;
+}
+
+.sidenav-item:hover{
+    border: 1px solid $green;
+    border-radius: 8px;
+}
+
+.sidenav-item-active{
+    border: 1px solid $green;
+    border-radius: 8px;
+    color: $green;
+}
+
+.sidenav-item-active > span {
+    font-weight: 800;
+}
+
+.sidenav-button > span{
+    color: $black;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.sidenav-dropdown-items{
+    margin-left: 10px;
+}
+
+.sidenav-dropdown-items > a{
+    font-weight: 700;
+    color: $teal;
+    font-size: 15px;
+}
+
+.sidenav-dropdown-items:hover{
+    border: 1px solid $green;
+    border-radius: 8px;
+}
+
+.sidenav-notification-count{
+    border: 2px solid $green;
+}

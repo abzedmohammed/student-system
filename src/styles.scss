@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+$light-grey-color: #8A92A6;
+$black: #000;
+$green: #4caf50;
+$teal: #004d40;
+
+*{
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+h1{
+    color: $teal;
+    font-weight: 800;
+}
