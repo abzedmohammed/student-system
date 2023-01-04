@@ -10,21 +10,28 @@ export class AppComponent {
   title = 'Student Dashboard';
 
   ngOnInit(): void {
+
     $("#toggle-sidenav").on("click", () => {
       $(".hidden-sidenav").toggleClass("hidden-sidenav-item")
+      $(".hide-all").toggleClass("hidden-sidenav-item")
+      $(".fixed").toggleClass("h-full")
     })
 
-    $(".sidenav-item").on("mouseenter", () => {
-      $(".hidden-sidenav").removeClass("hidden-sidenav-item")
-    })
+    // $(".sidenav-item").on("mouseenter", () => {
+    //   $(".hidden-sidenav").removeClass("hidden-sidenav-item")
+    //   $(".fixed").addClass("h-full")
+    // })
 
     $("#sidenav").on("mouseleave", () => {
       $(".hidden-sidenav").addClass("hidden-sidenav-item")
+      $(".hide-all").addClass("hidden-sidenav-item")
+      $(".fixed").removeClass("h-full")
     })
 
-    $(".sidenav-button").on("mouseenter", () => {
-      $(".hidden-sidenav").removeClass("hidden-sidenav-item")
-    })
+    // $(".sidenav-button").on("mouseenter", () => {
+    //   $(".hidden-sidenav").removeClass("hidden-sidenav-item")
+    //   $(".fixed").addClass("h-full")
+    // })
 
   }
 }

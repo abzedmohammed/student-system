@@ -4,6 +4,7 @@
     <a routerLink="/" class="flex items-center">
         <img src="../../assets/images/sis.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white hidden-sidenav-item hidden-sidenav">ST-System</span>
+        <span *ngIf="isLoggedOut" class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ST-System</span>
     </a>
 
     <div class="flex items-center md:order-2" *ngIf="isLoggedIn">

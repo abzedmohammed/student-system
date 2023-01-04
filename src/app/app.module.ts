@@ -16,6 +16,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SideNavbarComponent } from './side-navbar/side-navbar.component';
     AccountsComponent,
     PaymentComponent,
     SettingsComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

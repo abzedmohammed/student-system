@@ -9,6 +9,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { SettingsComponent } from './settings/settings.component';
+import { CoursesComponent } from './courses/courses.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'register', pathMatch: 'full', component: RegisterComponent},
   {path: 'dashboard', pathMatch: 'full', component: DashboardComponent},
   {path: 'accounts', pathMatch: 'full', component: AccountsComponent},
-  {path: 'dashboard/payments', pathMatch: 'full', component: PaymentComponent},
+  {path: 'payments', pathMatch: 'full', component: PaymentComponent},
+  {path: 'courses', pathMatch: 'full', component: CoursesComponent},
   {path: 'profile/:username', pathMatch: 'full', component: ProfileComponent},
   {path: 'settings', pathMatch: 'full', component: SettingsComponent},
   {path: '**', component: ErrorPageComponent},
